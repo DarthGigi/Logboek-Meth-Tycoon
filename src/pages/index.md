@@ -1,0 +1,70 @@
+---
+layout: ../layouts/BlogPost.astro
+title: "Logboek Meth Tycoon"
+description: "Hier documenteer ik mijn voortgang in het maken van Meth Tycoon in Unity."
+heroImage: "/assets/images/thumbnail.png"
+---
+
+# Inhoudsopgave
+
+# Opzetting wereld
+Ik begon eerst met het wereld mooi maken en opzetten. Ik kan namelijk het beste werken wanneer alles er mooi uitziet. Ik heb een aantal assets gedownload van de Unity Asset Store en deze in de wereld geplaatst.
+
+Als eerst heb ik een speler en grond toegevoegd:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <img src="/assets/images/speler-grond.png" class="!w-auto mx-auto" alt="Speler en grond">
+</div>
+
+Daarna heb ik ervoor gezorgd dat de speler kan bewegen:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <video muted={true} loop={true} autoPlay={true} class="!w-auto mx-auto" alt="Speler kan bewegen">
+    <source src="/assets/videos/speler-bewegen.mp4" type="video/mp4" />
+  </video>
+</div>
+
+Vervolgens heb ik de wereld mooier gemaakt door een aantal assets toe te voegen:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <img src="/assets/images/achtergrond-wereld.png" class="!w-auto mx-auto" alt="Wereld mooier">
+</div>
+<br/>
+
+# Verbetering beweging
+Ik heb de beweging van de speler verbeterd door ook de A en D toetsen te laten werken. Ook heb ik de speler animaties gegeven:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <video muted={true} loop={true} autoPlay={true} class="!w-auto mx-auto" alt="Speler kan bewegen">
+    <source src="/assets/videos/speler-bewegen-verbeterd.mp4" type="video/mp4" />
+  </video>
+</div>
+<br/>
+
+# Verbetering camera
+Ik heb de camera verbeterd door de camera na een bepaalde "checkpoint" te laten stoppen. Ook heb ik invisible walls toegevoegd aan de zijkanten van de camera zodat de speler niet van de wereld af kan lopen:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <video muted={true} loop={true} autoPlay={true} class="!w-auto mx-auto" alt="Camera verbeterd">
+    <source src="/assets/videos/camera-verbeterd.mp4" type="video/mp4" />
+  </video>
+</div>
+<br/>
+
+# Toevoegen meth
+Ik heb een meth asset van internet gedownload en deze in de wereld geplaatst en een floating animation toegevoegd zodat het lijkt alsof het zweeft. Ik heb ook een script toegevoegd zodat de meth verdwijnt wanneer de speler het oppakt:
+<div class="bg-neutral-950 rounded-lg p-4">
+  <video muted={true} loop={true} autoPlay={true} class="!w-auto mx-auto" alt="Speler kan meth oppakken">
+    <source src="/assets/videos/meth-items.mp4" type="video/mp4" />
+  </video>
+</div>
+<br/>
+
+# Toevoegen geluiden
+Ik heb een aantal geluiden toegevoegd aan de meth en de speler. Ook heb ik een achtergrond muziekje toegevoegd:
+<div class="bg-neutral-950 rounded-lg p-4 flex flex-col">
+  <button class="bg-neutral-900 text-neutral-100 mx-auto rounded-lg p-2" onclick="document.getElementById('geluiden').muted = !document.getElementById('geluiden').muted; document.getElementById('volume-off').classList.toggle('hidden'); document.getElementById('volume-on').classList.toggle('hidden');">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="volume-off"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="volume-on" class="hidden">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  </button>
+  <video id="geluiden" muted={true} loop={true} autoPlay={true} class="!w-auto mx-auto pointer-events-auto" alt="Geluiden">
+    <source src="/assets/videos/geluiden.mp4" type="video/mp4" />
+  </video>
+</div>
+<br/>

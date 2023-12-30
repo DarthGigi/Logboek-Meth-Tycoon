@@ -1,0 +1,55 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en" class="dark bg-[#131313] scroll-smooth">
+  <head>
+    <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    <style>
+      article *:not(img) {
+        max-width: 42rem;
+      }
+
+      article img {
+        max-width: 56rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+    <main class="relative overflow-hidden py-8">
+      <article class="relative px-4 py-4 sm:px-4 lg:px-6 prose-a:text-white prose prose-neutral prose-lg !prose-invert mx-auto mt-6 prose-img:pointer-events-none prose-headings:scroll-m-20 max-w-4xl prose-img:w-full prose-img:rounded-lg prose-video:w-full prose-video:rounded-lg">
+        <div class="mt-0 mb-5 mx-auto max-w-2xl">
+          <div class="mx-auto">
+            <div class="text-xs font-bold relative z-50 text-neutral-300">
+              <span class="uppercase block relative z-50">{frontmatter.type}</span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-0 mb-0 mx-auto max-w-2xl">
+          <div class="mx-auto">
+            <h1 class="text-5xl font-bold text-white relative z-50">{frontmatter.title}</h1>
+          </div>
+        </div>
+        {
+          frontmatter.description && (
+            <div class="mt-5 mb-0 mx-auto max-w-2xl ">
+              <div class="mx-auto">
+                <p class="font-medium text-white text-2xl leading-7 relative z-50" set:html={frontmatter.description} />
+              </div>
+            </div>
+          )
+        }
+        {frontmatter.heroImage && <img src={frontmatter.heroImage} alt="heroImage" class="mx-auto" />}
+        <div class="mx-auto prose-lg leading-[1.688rem]">
+          <slot />
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
