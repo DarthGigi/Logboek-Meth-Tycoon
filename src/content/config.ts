@@ -13,8 +13,8 @@ const blog = defineCollection({
       .string()
       .or(z.date())
       .transform((val) => new Date(val)),
-    heroImage: z.string().optional(),
-  }),
+    heroImage: z.string().optional()
+  })
 });
 
 export const collections = { blog };
