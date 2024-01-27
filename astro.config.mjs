@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import remarkToc from 'remark-toc';
 
-import react from "@astrojs/react";
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,8 +12,10 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), react()],
+  }), svelte()],
   markdown: {
-    remarkPlugins: [[remarkToc, { heading: "inhoudsopgave"}]]
+    remarkPlugins: [[remarkToc, {
+      heading: "inhoudsopgave"
+    }]]
   }
 });
