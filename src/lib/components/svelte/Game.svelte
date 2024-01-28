@@ -34,11 +34,11 @@
     }
 
     var buildUrl = "/assets/meth-tycoon/Build";
-    var loaderUrl = buildUrl + "/WEBGL Meth Tycoon.loader.js";
+    var loaderUrl = buildUrl + "/meth-tycoon.loader.js";
     var config = {
-      dataUrl: buildUrl + "/WEBGL Meth Tycoon.data.br",
-      frameworkUrl: buildUrl + "/WEBGL Meth Tycoon.framework.js.br",
-      codeUrl: buildUrl + "/WEBGL Meth Tycoon.wasm.br",
+      dataUrl: buildUrl + "/meth-tycoon.data.unityweb",
+      frameworkUrl: buildUrl + "/meth-tycoon.framework.js.unityweb",
+      codeUrl: buildUrl + "/meth-tycoon.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Gigi",
       productName: "Meth Tycoon",

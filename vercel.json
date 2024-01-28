@@ -1,32 +1,3 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "headers": [
-    {
-      "source": "/assets/meth-tycoon/Build/WEBGL Meth Tycoon.data.br",
-      "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "br"
-        }
-      ]
-    },
-    {
-      "source": "/assets/meth-tycoon/Build/WEBGL Meth Tycoon.framework.js.br",
-      "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "br"
-        }
-      ]
-    },
-    {
-      "source": "/assets/meth-tycoon/Build/WEBGL Meth Tycoon.wasm.br",
-      "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "br"
-        }
-      ]
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json"
 }
