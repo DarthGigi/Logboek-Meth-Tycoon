@@ -34,7 +34,7 @@ Vervolgens heb ik de wereld mooier gemaakt door een aantal assets toe te voegen:
 </div>
 <br />
 
-# Verbetering beweging
+## Verbetering beweging
 
 Ik heb de beweging van de speler verbeterd door ook de A en D toetsen te laten werken. Ook heb ik de speler animaties gegeven:
 
@@ -45,7 +45,7 @@ Ik heb de beweging van de speler verbeterd door ook de A en D toetsen te laten w
 </div>
 <br />
 
-# Verbetering camera
+## Verbetering camera
 
 Ik heb de camera verbeterd door de camera na een bepaalde "checkpoint" te laten stoppen. Ook heb ik invisible walls toegevoegd aan de zijkanten van de camera zodat de speler niet van de wereld af kan lopen:
 
@@ -56,7 +56,7 @@ Ik heb de camera verbeterd door de camera na een bepaalde "checkpoint" te laten 
 </div>
 <br />
 
-# Toevoegen meth
+## Toevoegen meth
 
 Ik heb een meth asset van internet gedownload en deze in de wereld geplaatst en een floating animation toegevoegd zodat het lijkt alsof het zweeft. Ik heb ook een script toegevoegd zodat de meth verdwijnt wanneer de speler het oppakt:
 
@@ -67,7 +67,7 @@ Ik heb een meth asset van internet gedownload en deze in de wereld geplaatst en 
 </div>
 <br />
 
-# Toevoegen geluiden
+## Toevoegen geluiden
 
 Ik heb een aantal geluiden toegevoegd aan de meth en de speler. Ook heb ik een achtergrond muziekje toegevoegd:
 
@@ -90,8 +90,90 @@ Ik heb een aantal geluiden toegevoegd aan de meth en de speler. Ook heb ik een a
 </div>
 <br />
 
-# Game
+# Herdenken van het kookproces
 
-Hier kan je de game spelen:
+Ik vond het oppakken van meth niet bij het thema en spel passen. Daarom heb ik besloten om het kookproces te herdenken. Wanneer je voor je huis staat en op `Enter` drukt, komt er een balk tevoorschijn die het kookproces laat zien. Wanneer de balk vol is, krijg je meth erbij:
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Kookproces">
+    <source src="/assets/videos/kookproces.mp4" type="video/mp4" />
+  </video>
+</div>
+
+# Toevoegen van een winkel
+
+Ik heb een winkel toegevoegd waar je upgrades kan kopen. Ik heb een aantal upgrades toegevoegd die je kan kopen met meth. Op de main screen heb ik een shop knopje toegevoegd zodat je naar de shop kan gaan:
+
+<div class="rounded-lg bg-neutral-950 p-4">
+  <img src="/assets/images/shop-knop.png" class="mx-auto !w-auto" alt="Shop knop" />
+</div>
+
+In de shop kan je upgrades kopen met meth. Ik heb een aantal upgrades toegevoegd die je kan kopen met meth:
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Shop">
+    <source src="/assets/videos/shop.mp4" type="video/mp4" />
+  </video>
+</div>
+
+# Toevoegen van hulpjes
+
+Ik heb hulpjes toegevoegd die meth voor je kunnen koken en zo veel sneller meth krijgt dan wanneer je het alleen zelf kookt:
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Hulpjes">
+    <source src="/assets/videos/hulpjes.mp4" type="video/mp4" />
+  </video>
+</div>
+
+# Toevoegen huizen
+
+Ik heb huizen toegevoegd om zo je "reputatie" te verhogen. Voor nu doen de huizen nog niks.
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Huizen">
+    <source src="/assets/videos/huizen.mp4" type="video/mp4" />
+  </video>
+</div>
+
+# Veranderen van currency
+
+Met meth dingen kopen vond ik niet echt bij het thema passen. Daarom heb ik besloten om meth te "veranderen" naar geld. Je kan nu geld verdienen door meth te verkopen. Je kan nu ook upgrades kopen met geld in plaats van meth.
+
+Ik heb een nieuwe knopje toegevoegd op de main screen om naar de buyers te gaan:
+
+<div class="rounded-lg bg-neutral-950 p-4">
+  <img src="/assets/images/buyers-knop.png" class="mx-auto !w-auto" alt="Buyers knop" />
+</div>
+
+## Buyers scherm
+
+Op het buyers scherm kan je meth verkopen voor geld. Iedere keer dat je het scherm opent wil elk buyer een nieuwe prijs betalen voor meth en het aantal meth dat ze willen kopen.
+
+<div class="rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Buyers">
+    <source src="/assets/videos/buyers.mp4" type="video/mp4" />
+  </video>
+</div>
+
+Voor elk huis dat je hebt, krijg je een extra buyer erbij:
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <img src="/assets/images/alle-buyers.png" class="mx-auto !w-auto" alt="Alle buyers" />
+</div>
+
+# Eind Achievement
+
+Ik heb een eind achievement toegevoegd. Wanneer je alle upgrades hebt gekocht, krijg je een eind achievement en dan heb je in principe het spel uitgespeeld. Maar omdat het een tycoon game is, kan je natuurlijk altijd doorgaan met meth koken en geld verdienen.
+
+<div class="mb-6 rounded-lg bg-neutral-950 p-4">
+  <video muted={true} loop={true} autoPlay={true} class="mx-auto !w-auto" alt="Eind achievement">
+    <source src="/assets/videos/eind-achievement.mp4" type="video/mp4" />
+  </video>
+</div>
+
+# Eind resultaat
+
+Na een aantal code optimalisaties en bug fixes is de game klaar. Je kan de game hieronder spelen:
 
 <TycoonGame client:visible />
