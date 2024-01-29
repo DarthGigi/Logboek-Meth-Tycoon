@@ -6,6 +6,7 @@
   let UnityInstance: any;
   onMount(async () => {
     createUnityInstance(canvas, {
+      arguments: [],
       dataUrl: "/assets/meth-tycoon/Build/meth-tycoon.data.unityweb",
       frameworkUrl: "/assets/meth-tycoon/Build/meth-tycoon.framework.js.unityweb",
       codeUrl: "/assets/meth-tycoon/Build/meth-tycoon.wasm.unityweb",
