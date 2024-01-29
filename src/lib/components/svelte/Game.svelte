@@ -23,6 +23,7 @@
       .catch((message) => {
         console.error("Failed to load the game", message);
         indexedDB.deleteDatabase("/idbfs");
+        indexedDB.deleteDatabase("UnityCache");
         localStorage.clear();
         sessionStorage.clear();
         caches.keys().then(function (names) {
